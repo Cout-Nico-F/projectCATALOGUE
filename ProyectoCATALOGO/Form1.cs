@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -20,6 +21,8 @@ namespace ProyectoCATALOGO
     public Catalogo()
     {
       InitializeComponent();
+      Environment.CurrentDirectory = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Images");
+      //MessageBox.Show(Environment.CurrentDirectory);
       InitializeCustomImageList(CustomList);
       img_IceCream.Image = Image.FromFile(CustomList.First().Value);
       img_IceCream.Tag = CustomList.First().Key;
@@ -51,10 +54,11 @@ namespace ProyectoCATALOGO
 
     private void InitializeCustomImageList (SortedList<string, string> CustomList)
     {
-      CustomList.Add("chocobomb", @"C:\chocobomb.png");
-      CustomList.Add("tricolor", @"C:\tricolor.png");
-      //CustomList.Add("magnuscream", @"C:\magnuscream.png");
-      CustomList.Add("chococherry", @"C:\chococherry.png");
+      
+      CustomList.Add("chocobomb", @".\chocobomb.png");
+      CustomList.Add("tricolor", @"C:.\tricolor.png");
+      CustomList.Add("magnuscream", @".\magnuscream.png");
+      CustomList.Add("chococherry", @".\chococherry.png");
     }
 
     private string NextIceCream ()
