@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,10 +18,12 @@ namespace ProyectoCATALOGO
   public partial class Catalogo : Form
   {
     SortedList<string, string> CustomList = new SortedList<string, string>();
+    private Dictionary<string, string> descriptions = new Dictionary<string, string>();
     string actualIceCreamTag;
     public Catalogo()
     {
       InitializeComponent();
+      InitializeDescriptions(descriptions);
       Environment.CurrentDirectory = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "Images");
       //MessageBox.Show(Environment.CurrentDirectory);
       InitializeCustomImageList(CustomList);
@@ -117,8 +120,50 @@ namespace ProyectoCATALOGO
       return "ERROR";
     }
 
-    
+    private void btn_description_Click(object sender, EventArgs e)
+    {
+      foreach (KeyValuePair<string, string> pair in CustomList)
+      {
+        if (pair.Key.Equals(img_IceCream.Tag.ToString()))
+        {
+          ShowDescription(pair.Key);
+        }
+      }
+    }
 
+        
+   
+    private void ShowDescription(string key)
+    {
+
+      switch (key)
+      {
+        case "chocobomb":
+          MessageBox.Show(descriptions["chocobomb"]);
+          break;
+        case "magnuscream":
+          MessageBox.Show(descriptions["magnuscream"]);
+          break;
+        case "tricolor":
+            MessageBox.Show(descriptions["tricolor"]);
+          break;
+        case "chococherry":
+            MessageBox.Show(descriptions["chococherry"]);
+          break;
+        default:
+          MessageBox.Show("ERROR 303 unknown key on ShowDescription() parameter (string)");
+          break;
+      }
+    }
+
+
+    private void InitializeDescriptions(Dictionary<string, string> list)
+    {
+      list.Add("chocobomb", "ChocoBomb: \nDeliciosa copa de crema helada de chocolate belga con leche y crocante de almendras . Cubierto de salsa de chocolate amargo, acompañado de una oblea rellena de crema de cacao");
+      list.Add("tricolor", "Tricolor: \nIdeal para cuando no podes decidirte por un solo sabor, Crema de vainilla, frutilla con frutos rojos y chocolate clasico, acompañados de almibar y obleas");
+      list.Add("magnuscream", "MagnusCream: \nTodo el poder de las cremas en un mismo postre, base de crema chantilly cubierto de crema de castañas y cacao, acompañado de crocante de frutos secos");
+      list.Add("chococherry", "ChocoCherry: \nPerfecta combinacion de chocolate intenso fabricado con cacao de ecuador, crema helada de vainilla y la frescura especial de la crema de cerezas, acompañado de cerezas acarameladas y crema chantilly");
+    }
     /*
     private void GetActualIceCream ()
     {

@@ -64,6 +64,7 @@
       this.btn_description.Size = new System.Drawing.Size(327, 90);
       this.btn_description.TabIndex = 3;
       this.btn_description.UseVisualStyleBackColor = true;
+      this.btn_description.Click += new System.EventHandler(this.btn_description_Click);
       // 
       // btn_previous
       // 
