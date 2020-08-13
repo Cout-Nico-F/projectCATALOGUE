@@ -37,6 +37,10 @@ namespace ProyectoCATALOGO
     private void btn_next_Click(object sender, EventArgs e)
     {
       img_IceCream.Image = null;
+      if (btn_PopupDescription.Visible)
+      {
+        btn_PopupDescription.Visible = false;
+      }
       img_IceCream.Image = System.Drawing.Image.FromFile(NextIceCream());
       //img_IceCream.Tag = GetActualIceCream();
       img_IceCream.Tag = actualIceCreamTag;
@@ -45,6 +49,10 @@ namespace ProyectoCATALOGO
     private void btn_previous_Click(object sender, EventArgs e)
     {
       img_IceCream.Image = null;
+      if (btn_PopupDescription.Visible)
+      {
+        btn_PopupDescription.Visible = false;
+      }
       string previousOne = PreviousIceCream();
       if (previousOne.Equals("ERROR"))
       {
