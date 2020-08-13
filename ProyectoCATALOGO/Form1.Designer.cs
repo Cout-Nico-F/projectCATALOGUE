@@ -29,15 +29,40 @@
     private void InitializeComponent()
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Catalogo));
+      this.btn_PopupDescription = new System.Windows.Forms.Button();
+      this.btn_Database = new System.Windows.Forms.Button();
       this.btn_recipe = new System.Windows.Forms.Button();
       this.btn_description = new System.Windows.Forms.Button();
       this.btn_previous = new System.Windows.Forms.Button();
       this.btn_next = new System.Windows.Forms.Button();
       this.img_IceCream = new System.Windows.Forms.PictureBox();
-      this.btn_PopupDescription = new System.Windows.Forms.Button();
-      this.btn_Database = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.img_IceCream)).BeginInit();
       this.SuspendLayout();
+      // 
+      // btn_PopupDescription
+      // 
+      this.btn_PopupDescription.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btn_PopupDescription.Location = new System.Drawing.Point(51, 589);
+      this.btn_PopupDescription.Name = "btn_PopupDescription";
+      this.btn_PopupDescription.Size = new System.Drawing.Size(659, 140);
+      this.btn_PopupDescription.TabIndex = 5;
+      this.btn_PopupDescription.Text = "button1";
+      this.btn_PopupDescription.UseVisualStyleBackColor = true;
+      this.btn_PopupDescription.Click += new System.EventHandler(this.btn_PopupDescription_Click);
+      // 
+      // btn_Database
+      // 
+      this.btn_Database.BackgroundImage = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
+      this.btn_Database.FlatAppearance.BorderSize = 0;
+      this.btn_Database.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.btn_Database.Image = ((System.Drawing.Image)(resources.GetObject("btn_Database.Image")));
+      this.btn_Database.Location = new System.Drawing.Point(575, 181);
+      this.btn_Database.Name = "btn_Database";
+      this.btn_Database.RightToLeft = System.Windows.Forms.RightToLeft.No;
+      this.btn_Database.Size = new System.Drawing.Size(77, 104);
+      this.btn_Database.TabIndex = 6;
+      this.btn_Database.UseVisualStyleBackColor = true;
+      this.btn_Database.Click += new System.EventHandler(this.btn_Database_Click);
       // 
       // btn_recipe
       // 
@@ -109,30 +134,6 @@
       this.img_IceCream.TabIndex = 1;
       this.img_IceCream.TabStop = false;
       this.img_IceCream.Tag = "chocobomb";
-      // 
-      // btn_PopupDescription
-      // 
-      this.btn_PopupDescription.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.btn_PopupDescription.Location = new System.Drawing.Point(51, 589);
-      this.btn_PopupDescription.Name = "btn_PopupDescription";
-      this.btn_PopupDescription.Size = new System.Drawing.Size(659, 140);
-      this.btn_PopupDescription.TabIndex = 5;
-      this.btn_PopupDescription.Text = "button1";
-      this.btn_PopupDescription.UseVisualStyleBackColor = true;
-      this.btn_PopupDescription.Click += new System.EventHandler(this.btn_PopupDescription_Click);
-      // 
-      // btn_Database
-      // 
-      this.btn_Database.BackgroundImage = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
-      this.btn_Database.FlatAppearance.BorderSize = 0;
-      this.btn_Database.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.btn_Database.Image = ((System.Drawing.Image)(resources.GetObject("btn_Database.Image")));
-      this.btn_Database.Location = new System.Drawing.Point(575, 181);
-      this.btn_Database.Name = "btn_Database";
-      this.btn_Database.RightToLeft = System.Windows.Forms.RightToLeft.No;
-      this.btn_Database.Size = new System.Drawing.Size(77, 104);
-      this.btn_Database.TabIndex = 6;
-      this.btn_Database.UseVisualStyleBackColor = true;
       // 
       // Catalogo
       // 

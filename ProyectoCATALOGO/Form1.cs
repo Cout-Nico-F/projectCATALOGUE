@@ -208,16 +208,22 @@ namespace ProyectoCATALOGO
         btn_PopupDescription.Visible = false;
       }
     }
+
+    private void btn_Database_Click(object sender, EventArgs e)
+    {
+      Form2 awards = new Form2();
+      awards.Show();
+    }
     /*
 private void GetActualIceCream ()
 {
- foreach (KeyValuePair<string, string> pair in CustomList)
- {
-   if (pair.Key == img_IceCream.Image)
-   {
+foreach (KeyValuePair<string, string> pair in CustomList)
+{
+if (pair.Key == img_IceCream.Image)
+{
 
-   }
- }
+}
+}
 }*/
   }
 }
