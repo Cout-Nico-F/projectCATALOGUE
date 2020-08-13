@@ -111,7 +111,7 @@
       this.iceCreamsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
       this.iceCreamsBindingNavigator.Name = "iceCreamsBindingNavigator";
       this.iceCreamsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-      this.iceCreamsBindingNavigator.Size = new System.Drawing.Size(289, 25);
+      this.iceCreamsBindingNavigator.Size = new System.Drawing.Size(332, 25);
       this.iceCreamsBindingNavigator.TabIndex = 0;
       this.iceCreamsBindingNavigator.Text = "bindingNavigator1";
       // 
@@ -150,7 +150,8 @@
       // nombreLabel
       // 
       nombreLabel.AutoSize = true;
-      nombreLabel.Location = new System.Drawing.Point(12, 42);
+      nombreLabel.Image = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
+      nombreLabel.Location = new System.Drawing.Point(65, 85);
       nombreLabel.Name = "nombreLabel";
       nombreLabel.Size = new System.Drawing.Size(47, 13);
       nombreLabel.TabIndex = 1;
@@ -159,7 +160,7 @@
       // nombreTextBox
       // 
       this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iceCreamsBindingSource, "Nombre", true));
-      this.nombreTextBox.Location = new System.Drawing.Point(111, 39);
+      this.nombreTextBox.Location = new System.Drawing.Point(164, 82);
       this.nombreTextBox.Name = "nombreTextBox";
       this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
       this.nombreTextBox.TabIndex = 2;
@@ -167,7 +168,8 @@
       // creadoEnLabel
       // 
       creadoEnLabel.AutoSize = true;
-      creadoEnLabel.Location = new System.Drawing.Point(12, 68);
+      creadoEnLabel.Image = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
+      creadoEnLabel.Location = new System.Drawing.Point(65, 111);
       creadoEnLabel.Name = "creadoEnLabel";
       creadoEnLabel.Size = new System.Drawing.Size(60, 13);
       creadoEnLabel.TabIndex = 3;
@@ -176,7 +178,7 @@
       // creadoEnTextBox
       // 
       this.creadoEnTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iceCreamsBindingSource, "CreadoEn", true));
-      this.creadoEnTextBox.Location = new System.Drawing.Point(111, 65);
+      this.creadoEnTextBox.Location = new System.Drawing.Point(164, 108);
       this.creadoEnTextBox.Name = "creadoEnTextBox";
       this.creadoEnTextBox.Size = new System.Drawing.Size(100, 20);
       this.creadoEnTextBox.TabIndex = 4;
@@ -184,7 +186,8 @@
       // premiosGanadosLabel
       // 
       premiosGanadosLabel.AutoSize = true;
-      premiosGanadosLabel.Location = new System.Drawing.Point(12, 94);
+      premiosGanadosLabel.Image = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
+      premiosGanadosLabel.Location = new System.Drawing.Point(65, 137);
       premiosGanadosLabel.Name = "premiosGanadosLabel";
       premiosGanadosLabel.Size = new System.Drawing.Size(93, 13);
       premiosGanadosLabel.TabIndex = 5;
@@ -193,7 +196,7 @@
       // premiosGanadosTextBox
       // 
       this.premiosGanadosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iceCreamsBindingSource, "PremiosGanados", true));
-      this.premiosGanadosTextBox.Location = new System.Drawing.Point(111, 91);
+      this.premiosGanadosTextBox.Location = new System.Drawing.Point(164, 134);
       this.premiosGanadosTextBox.Name = "premiosGanadosTextBox";
       this.premiosGanadosTextBox.Size = new System.Drawing.Size(100, 20);
       this.premiosGanadosTextBox.TabIndex = 6;
@@ -201,7 +204,8 @@
       // favoritosLabel
       // 
       favoritosLabel.AutoSize = true;
-      favoritosLabel.Location = new System.Drawing.Point(12, 120);
+      favoritosLabel.Image = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
+      favoritosLabel.Location = new System.Drawing.Point(65, 163);
       favoritosLabel.Name = "favoritosLabel";
       favoritosLabel.Size = new System.Drawing.Size(53, 13);
       favoritosLabel.TabIndex = 7;
@@ -210,7 +214,7 @@
       // favoritosTextBox
       // 
       this.favoritosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iceCreamsBindingSource, "Favoritos", true));
-      this.favoritosTextBox.Location = new System.Drawing.Point(111, 117);
+      this.favoritosTextBox.Location = new System.Drawing.Point(164, 160);
       this.favoritosTextBox.Name = "favoritosTextBox";
       this.favoritosTextBox.Size = new System.Drawing.Size(100, 20);
       this.favoritosTextBox.TabIndex = 8;
@@ -283,7 +287,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = global::ProyectoCATALOGO.Properties.Resources.fondovacio;
-      this.ClientSize = new System.Drawing.Size(289, 164);
+      this.ClientSize = new System.Drawing.Size(332, 222);
       this.Controls.Add(nombreLabel);
       this.Controls.Add(this.nombreTextBox);
       this.Controls.Add(creadoEnLabel);
