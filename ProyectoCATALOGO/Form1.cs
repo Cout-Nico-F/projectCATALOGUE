@@ -29,6 +29,9 @@ namespace ProyectoCATALOGO
       InitializeCustomImageList(CustomList);
       img_IceCream.Image = Image.FromFile(CustomList.First().Value);
       img_IceCream.Tag = CustomList.First().Key;
+
+      btn_PopupDescription.BackgroundImage = Properties.Resources.fondovacio;
+      btn_PopupDescription.Visible = false;
     }
 
     private void btn_next_Click(object sender, EventArgs e)
@@ -139,16 +142,17 @@ namespace ProyectoCATALOGO
       switch (key)
       {
         case "chocobomb":
-          MessageBox.Show(descriptions["chocobomb"]);
+          CustomMessageBox(descriptions["chocobomb"], "chocobomb");
+          //MessageBox.Show(descriptions["chocobomb"]);
           break;
         case "magnuscream":
-          MessageBox.Show(descriptions["magnuscream"]);
+          CustomMessageBox(descriptions["magnuscream"], "magnuscream");
           break;
         case "tricolor":
-            MessageBox.Show(descriptions["tricolor"]);
+          CustomMessageBox(descriptions["tricolor"], "tricolor");
           break;
         case "chococherry":
-            MessageBox.Show(descriptions["chococherry"]);
+          CustomMessageBox(descriptions["chococherry"],"chococherry");
           break;
         default:
           MessageBox.Show("ERROR 303 unknown key on ShowDescription() parameter (string)");
@@ -156,6 +160,30 @@ namespace ProyectoCATALOGO
       }
     }
 
+    private void CustomMessageBox (string desc, string key)
+    {
+      switch (key)
+      {
+        case "chocobomb":
+          btn_PopupDescription.Font = new Font("Arial", 15, FontStyle.Bold, GraphicsUnit.Point);
+
+          break;
+        case "magnuscream":
+          btn_PopupDescription.Font = new Font("Constantia", 15, FontStyle.Bold, GraphicsUnit.Point);
+          break;
+        case "tricolor":
+          btn_PopupDescription.Font = new Font("Microsoft Sans Serif", 18, FontStyle.Regular, GraphicsUnit.Point);
+          break;
+        case "chococherry":
+          btn_PopupDescription.Font = new Font("Tahoma", 15, FontStyle.Italic, GraphicsUnit.Point);
+          break;
+        default:
+          MessageBox.Show("ERROR 304 unknown key on CustomMessageBox() parameter (key)");
+          break;
+      }
+      btn_PopupDescription.Text = desc;
+      btn_PopupDescription.Visible = true;
+    }
 
     private void InitializeDescriptions(Dictionary<string, string> list)
     {
@@ -164,16 +192,24 @@ namespace ProyectoCATALOGO
       list.Add("magnuscream", "MagnusCream: \nTodo el poder de las cremas en un mismo postre, base de crema chantilly cubierto de crema de castañas y cacao, acompañado de crocante de frutos secos");
       list.Add("chococherry", "ChocoCherry: \nPerfecta combinacion de chocolate intenso fabricado con cacao de ecuador, crema helada de vainilla y la frescura especial de la crema de cerezas, acompañado de cerezas acarameladas y crema chantilly");
     }
-    /*
-    private void GetActualIceCream ()
-    {
-      foreach (KeyValuePair<string, string> pair in CustomList)
-      {
-        if (pair.Key == img_IceCream.Image)
-        {
 
-        }
+    private void btn_PopupDescription_Click(object sender, EventArgs e)
+    {
+      if (btn_PopupDescription.Visible)
+      {
+        btn_PopupDescription.Visible = false;
       }
-    }*/
+    }
+    /*
+private void GetActualIceCream ()
+{
+ foreach (KeyValuePair<string, string> pair in CustomList)
+ {
+   if (pair.Key == img_IceCream.Image)
+   {
+
+   }
+ }
+}*/
   }
 }

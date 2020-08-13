@@ -34,6 +34,7 @@
       this.btn_previous = new System.Windows.Forms.Button();
       this.btn_next = new System.Windows.Forms.Button();
       this.img_IceCream = new System.Windows.Forms.PictureBox();
+      this.btn_PopupDescription = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.img_IceCream)).BeginInit();
       this.SuspendLayout();
       // 
@@ -108,11 +109,23 @@
       this.img_IceCream.TabStop = false;
       this.img_IceCream.Tag = "chocobomb";
       // 
+      // btn_PopupDescription
+      // 
+      this.btn_PopupDescription.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btn_PopupDescription.Location = new System.Drawing.Point(51, 589);
+      this.btn_PopupDescription.Name = "btn_PopupDescription";
+      this.btn_PopupDescription.Size = new System.Drawing.Size(659, 140);
+      this.btn_PopupDescription.TabIndex = 5;
+      this.btn_PopupDescription.Text = "button1";
+      this.btn_PopupDescription.UseVisualStyleBackColor = true;
+      this.btn_PopupDescription.Click += new System.EventHandler(this.btn_PopupDescription_Click);
+      // 
       // Catalogo
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(764, 741);
+      this.Controls.Add(this.btn_PopupDescription);
       this.Controls.Add(this.btn_recipe);
       this.Controls.Add(this.btn_description);
       this.Controls.Add(this.btn_previous);
@@ -136,6 +149,7 @@
     private System.Windows.Forms.Button btn_previous;
     private System.Windows.Forms.Button btn_description;
     private System.Windows.Forms.Button btn_recipe;
+    private System.Windows.Forms.Button btn_PopupDescription;
   }
 }
 
